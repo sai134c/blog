@@ -1,0 +1,110 @@
+div,p,a,img,header{    
+    background-color: rgba(0, 0, 0, 0.227);
+}
+
+body{
+    margin: 0 auto;
+}
+header{
+    height: 100px;
+    background-color: teal;
+}
+header p{
+    float: left;
+    margin: 30px;
+    color: azure;
+    font-size: 30px;
+}
+
+.nav_bar, .account_bar{
+    float: left;
+}
+.nav_bar{
+    width: 90%;
+    height: 100px;
+}
+.account_bar{
+    width: 10%;
+    height: 100px;
+}
+
+.account_bar .top, .account_bar .bottom{
+    height: 50%;
+}
+
+.account_bar .top{
+    color: white;
+    text-align: center;
+}
+
+
+main{
+    background-color: aqua;
+    width: 930px;
+    margin: auto;
+}
+
+.post_card {
+    box-sizing: border-box; /* Учитывайте границы и отступы внутри блока */
+    height: max-content;
+    width: 900px; 
+    background-color: lightgray;
+    margin: auto;
+    border: 1px solid #ccc; /* Добавьте границу для лучшей визуализации разделения постов */
+    padding: 10px; /* Внутренний отступ для контента поста */
+    margin-top: 5px;
+}
+
+
+.post_author{
+    width: 100%;
+    height: 70px;
+}   
+
+.post_author .author_name, 
+.post_author .author_img{
+    float: left;
+}
+
+.post_author .author_img {
+    width: 70px;
+    height: 70px;
+    box-sizing: border-box; /* Учитывайте границы и отступы внутри блока */
+}
+
+
+.post_author .author_img img{
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+}
+
+.post_author .author_name{
+    margin-top: 0px;
+}
+
+.post_author .author_name p {
+    font-size: 25px;
+    color: white;
+    padding-top: 10px;
+    margin: 0; /* Уберите верхний отступ, чтобы избежать лишних пробелов */
+}
+
+
+.post_img {
+    width: 900px; /* Ширина блока .post_img */
+    height: auto; /* Разрешите блоку растягиваться по высоте в зависимости от содержимого */
+    background-color: black;
+    margin: auto;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+
+.post_img img {
+    width: 100%; /* Используйте 100% для растяжения изображения по ширине блока */
+    height: 400px;
+    object-fit: contain;
+}
+

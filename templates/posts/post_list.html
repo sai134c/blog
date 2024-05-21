@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+{% for post in post_list %}
+    <a href="{% url 'post_detail' pid=post.pk %}">
+        <div class="post_card">
+            <div class="post_author">
+                <div class="author_img">
+                    <img src="" alt="" >
+                </div>
+                <div class="author_name">
+                    <p class="author_name">{{post.author.username}}</p>
+                </div>
+                <div class="edit_block">
+                    {% if post.author == user %}
+                    <a href="{% url 'post_edit' pid=post.pk %}"><p class="edit" style=" color: red;">Edit</p></a>
+                    {% endif %}
+                </div>
+            </div>
+            <p style="background-color: gray;">{{post.text}}</p>
+            <div class="post_img">
+                {% for att in post.images.all %}
+                    <img src="/media/{{att.image}}">
+                {% endfor %}
+            </div>
+            <p>{{post.time_stamp}}</p>
+        </div>
+    </a>
+{% endfor %}
+{% endblock content %}

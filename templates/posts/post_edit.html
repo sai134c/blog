@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+    <p>Edit post</p>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <p>Delete Selected</p>
+        {% for att in post_att %}
+        <img src="/media/{{att.image}}" alt="" style="width: 100px; height: 100px; object-fit: cover;">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="{{att.pk}}" id="{{att.pk}}" name="attachments">
+            <!-- <label class="form-check-label" for="{{image.pk}}"></label> -->
+          </div>
+        {% endfor %}
+        <button type="submit">Save</button>
+    </form>
+</div>
+{% endblock %}
